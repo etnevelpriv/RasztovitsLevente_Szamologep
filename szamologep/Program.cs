@@ -20,7 +20,7 @@ namespace szamologep
 
         static string Muvelet_Kivalasztasa()
         {
-            Console.WriteLine("Lehetőségek: '+' '-' '/' '*' '%' ");
+            Console.WriteLine("Lehetőségek: '+' '-' '/' '*' '%' '^' ");
             Console.WriteLine("Elvégezndő művelet jele: ");
             string muvelet = Console.ReadLine();
             return muvelet;
@@ -47,6 +47,10 @@ namespace szamologep
         static double Szazalek(double szam1, double szam2)
         {
             return szam1 % szam2;
+        }
+        static double Hatvanyozas(double szam1, double szam2)
+        {
+            return Math.Pow(szam1, szam2);
         }
 
         static string Indit()
@@ -95,6 +99,10 @@ namespace szamologep
             else if (muvelet == "%")
             {
                 Console.WriteLine($"A százaékos osztás eredménye: {Szazalek(szam1, szam2)}");
+            }
+            else if (muvelet == "^")
+            {
+                Console.WriteLine($"A hatványozás eredménye: {Hatvanyozas(szam1, szam2)}");
             }
             else
             {
