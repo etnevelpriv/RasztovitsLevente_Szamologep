@@ -16,9 +16,21 @@ namespace szamologep
             return szam;
         }
 
+        static double Masodik_Szam()
+        {
+            Console.Write("Kérem adja meg a második számot: ");
+            double szam = Convert.ToDouble(Console.ReadLine());
+            return szam;
+        }
+
         static void Main(string[] args)
         {
-            Console.WriteLine($"Az első szám: {Elso_Szam()}");
+            double szam1 = Elso_Szam();
+            double szam2 = Masodik_Szam();
+
+            Console.WriteLine($"Az első szám: {szam1}");
+            Console.WriteLine($"A második szám: {szam2}");
+
         }
 
     }
