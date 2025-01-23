@@ -36,6 +36,11 @@ namespace szamologep
             return szam1 - szam2;
         }
 
+        static double Osztas(double szam1, double szam2)
+        {
+            return szam1 / szam2;
+        }
+
         static void Main(string[] args)
         {
             double szam1 = Elso_Szam();
@@ -51,7 +56,7 @@ namespace szamologep
             }
             else if (muvelet == "-")
             {
-                Console.WriteLine($"A különbség: {Kulonbseg(szam1, szam2)}");
+                Console.WriteLine($"A különbség: {Kivonas(szam1, szam2)}");
             }
             else if (muvelet == "/")
             {
