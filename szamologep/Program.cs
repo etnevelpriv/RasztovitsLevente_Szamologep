@@ -49,11 +49,29 @@ namespace szamologep
             return szam1 % szam2;
         }
 
+        static string Indit()
+        {
+            while (true)
+            {
+                Console.WriteLine("Szeretné elindítani a programot? (Igen/Nem)");
+                string valasz = Console.ReadLine().ToLower();
+                if (valasz == "igen")
+                {
+                    return valasz;
+                }
+                else
+                {
+                    Console.WriteLine("Hibás válasz!");
+                }
+            }
+        }
+
         static void Main(string[] args)
         {
             double szam1 = Elso_Szam();
             double szam2 = Masodik_Szam();
             string muvelet = Muvelet_Kivalasztasa();
+            string valasz = Indit();
 
             Console.WriteLine($"Az első szám: {szam1}");
             Console.WriteLine($"A második szám: {szam2}");
