@@ -40,6 +40,10 @@ namespace szamologep
         {
             return szam1 / szam2;
         }
+        static double Szorzas(double szam1, double szam2)
+        {
+            return szam1 * szam2;
+        }
 
         static void Main(string[] args)
         {
