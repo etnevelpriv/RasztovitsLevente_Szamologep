@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace szamologep
 {
@@ -33,6 +29,11 @@ namespace szamologep
         static double Osszeadas(double szam1, double szam2)
         {
             return szam1 + szam2;
+        }
+
+        static double Kivonas(double szam1, double szam2)
+        {
+            return szam1 - szam2;
         }
 
         static void Main(string[] args)
