@@ -8,7 +8,6 @@ namespace szamologep
 {
     internal class Program
     {
-
         static double Elso_Szam()
         {
             Console.Write("Kérem adja meg az első számot: ");
@@ -31,6 +30,11 @@ namespace szamologep
             return muvelet;
         }
 
+        static double Osszeadas(double szam1, double szam2)
+        {
+            return szam1 + szam2;
+        }
+
         static void Main(string[] args)
         {
             double szam1 = Elso_Szam();
@@ -40,32 +44,30 @@ namespace szamologep
             Console.WriteLine($"Az első szám: {szam1}");
             Console.WriteLine($"A második szám: {szam2}");
 
-            if(muvelet == "+")
+            if (muvelet == "+")
             {
-                Console.WriteLine($"Az összeg: {Osszeadas}");
+                Console.WriteLine($"Az összeg: {Osszeadas(szam1, szam2)}");
             }
-            else if (Muvelet_Kivalasztasa() == "-")
+            else if (muvelet == "-")
             {
-                Console.WriteLine($"A különbség: {Kulonbseg()}");
+                Console.WriteLine($"A különbség: {Kulonbseg(szam1, szam2)}");
             }
-            else if (Muvelet_Kivalasztasa() == "/")
+            else if (muvelet == "/")
             {
-                Console.WriteLine($"Az osztás eredménye: {Osztas}");
+                Console.WriteLine($"Az osztás eredménye: {Osztas(szam1, szam2)}");
             }
-            else if (Muvelet_Kivalasztasa() == "*")
+            else if (muvelet == "*")
             {
-                Console.WriteLine($"A szorzás eredménye: {Szorzas()}");
+                Console.WriteLine($"A szorzás eredménye: {Szorzas(szam1, szam2)}");
             }
-            else if (Muvelet_Kivalasztasa() == "%")
+            else if (muvelet == "%")
             {
-                Console.WriteLine($"A százaékos osztás eredménye: {Szazalek()}");
+                Console.WriteLine($"A százaékos osztás eredménye: {Szazalek(szam1, szam2)}");
             }
             else
             {
                 Console.WriteLine("Hibás művelet!");
             }
-
         }
-
     }
 }
