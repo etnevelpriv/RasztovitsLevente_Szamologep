@@ -44,6 +44,10 @@ namespace szamologep
         {
             return szam1 * szam2;
         }
+        static double Szazalek(double szam1, double szam2)
+        {
+            return szam1 % szam2;
+        }
 
         static void Main(string[] args)
         {
